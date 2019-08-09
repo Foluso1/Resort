@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<h1 style="text-align: center; margin-top: 20px;">Create a New Comment</h1>
+<div style="width: 60%; margin: 0 auto;">
+    <br>
+    <div class="container">
+        <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+            <p>Welcome <%= username %>! </p>
+            <input class="form-control" type="text" name="comment[text]" placeholder="Write your text here">
+            <br>
+            <!-- <input class="form-control" type="text" name="<%= username %>" placeholder="Image URL">
+            <br> -->
+            <!-- <input class="form-control" type="text" name="image" placeholder="Image URL"> -->
+            <!-- <br> -->
+            <!-- <textarea rows="4" cols="100" name="description" placeholder="Enter text here..."></textarea>
+            <br> -->
+            <button class="btn btn-md btn-primary btn-block">Submit</button>
+        </form>
+        <p></p>
+        <a href="/campgrounds">Go Back</a>
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

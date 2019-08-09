@@ -1,0 +1,41 @@
+<% include partials/header %>
+
+
+
+<div class="container">
+    <header class="jumbotron">
+        <h1>This is the Campgrounds Page</h1>
+        <p>View our hand-picked campgrounds from all over Nigeria</p>
+        <br>
+        <p></p>
+        <p>
+            <a class="btn btn-large btn-primary" href="campgrounds/new">Add a Campground</a>
+        </p>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div>
+                <h4>Our Most Popular Campgrounds</h4>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <% allCampgrounds.forEach(function(campground){ %>
+            <figure class="figure col-md-3 col-sm-6">
+                <div class="img-thumbnail">
+                    <img class="img-fluid" src="<%= campground.image %>" alt="<%= campground.name %>">
+                        <figcaption class="text-center figure-caption">
+                            <h5><%= campground.name %></h5>                        
+                        </figcaption>
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-success btn-md">More Info</a>
+                    </p>
+                </div>
+            </figure>
+        <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>

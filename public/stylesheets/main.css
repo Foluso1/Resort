@@ -1,0 +1,15 @@
+
+
+img.img-responsive {
+    width: 100%;
+}
+
+.img-show {
+    padding: 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+div.caption {
+    padding: 10px;
+}
